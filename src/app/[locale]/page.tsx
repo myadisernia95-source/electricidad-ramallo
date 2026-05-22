@@ -8,7 +8,7 @@ import ShippingInfo from '@/components/ShippingInfo';
 import InstagramSection from '@/components/InstagramSection';
 import Newsletter from '@/components/Newsletter';
 import GuidesPreview from '@/components/GuidesPreview';
-import { buildAlternates } from '@/lib/seo';
+import { buildAlternates, buildOpenGraph } from '@/lib/seo';
 
 export async function generateMetadata({
   params
@@ -32,7 +32,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: buildAlternates(locale, '/'),
-    openGraph: { title, description, url: buildAlternates(locale, '/').canonical }
+    openGraph: buildOpenGraph({ locale, path: '/', title, description })
   };
 }
 

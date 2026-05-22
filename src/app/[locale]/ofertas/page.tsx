@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ProductCard from '@/components/ProductCard';
 import { getOffers } from '@/data/products';
-import { buildAlternates, localeUrl } from '@/lib/seo';
+import { buildAlternates, buildOpenGraph } from '@/lib/seo';
 
 export async function generateMetadata({
   params
@@ -23,7 +23,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: buildAlternates(locale, path),
-    openGraph: { title, description, url: localeUrl(locale, path) }
+    openGraph: buildOpenGraph({ locale, path, title, description })
   };
 }
 

@@ -6,7 +6,7 @@ import { getGuide, guides } from '@/data/guides';
 import { getProduct } from '@/data/products';
 import JsonLd from '@/components/JsonLd';
 import { techArticleJsonLd, breadcrumbJsonLd } from '@/lib/jsonld';
-import { buildAlternates, localeUrl } from '@/lib/seo';
+import { buildAlternates, buildOpenGraph, localeUrl } from '@/lib/seo';
 import ProductCard from '@/components/ProductCard';
 
 export async function generateStaticParams() {
@@ -30,10 +30,7 @@ export async function generateMetadata({
     keywords: m.targetKeywords,
     alternates: buildAlternates(locale, path),
     openGraph: {
-      title: m.title,
-      description,
-      url: localeUrl(locale, path),
-      type: 'article',
+      ...buildOpenGraph({ locale, path, title: m.title, description, type: 'article' }),
       publishedTime: m.published,
       modifiedTime: m.updated ?? m.published
     }

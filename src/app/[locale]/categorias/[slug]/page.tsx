@@ -7,7 +7,7 @@ import { getProductsByCategory } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import JsonLd from '@/components/JsonLd';
 import { breadcrumbJsonLd } from '@/lib/jsonld';
-import { buildAlternates, localeUrl } from '@/lib/seo';
+import { buildAlternates, buildOpenGraph, localeUrl } from '@/lib/seo';
 
 const validSlugs = categories.map((c) => c.slug);
 
@@ -40,7 +40,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: buildAlternates(locale, path),
-    openGraph: { title, description, url: localeUrl(locale, path) }
+    openGraph: buildOpenGraph({ locale, path, title, description })
   };
 }
 

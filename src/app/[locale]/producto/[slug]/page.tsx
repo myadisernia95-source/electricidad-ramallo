@@ -9,7 +9,7 @@ import PriceBlock from '@/components/PriceBlock';
 import AddToCartButton from '@/components/cart/AddToCartButton';
 import JsonLd from '@/components/JsonLd';
 import { productJsonLd, breadcrumbJsonLd } from '@/lib/jsonld';
-import { buildAlternates, SITE_URL, localeUrl } from '@/lib/seo';
+import { buildAlternates, buildOpenGraph, SITE_URL, localeUrl } from '@/lib/seo';
 import { getGuidesForProduct } from '@/data/guides';
 
 export async function generateStaticParams() {
@@ -34,13 +34,13 @@ export async function generateMetadata({
     title,
     description,
     alternates: buildAlternates(locale, path),
-    openGraph: {
+    openGraph: buildOpenGraph({
+      locale,
+      path,
       title,
       description,
-      url: localeUrl(locale, path),
-      type: 'website',
       images: [{ url: imageUrl, alt: product.name }]
-    }
+    })
   };
 }
 
