@@ -51,8 +51,7 @@ export const metadata: Metadata = {
   },
   icons: { icon: '/LOGO.png', apple: '/LOGO.png' },
   verification: {
-    // TODO when the user verifies Google Search Console, paste the meta token here:
-    // google: 'PASTE_GOOGLE_VERIFICATION_TOKEN'
+    google: 'EbTy4yqg00KYVR-fniFXvJeqTTZd2eHAPLo5HHlXOIo'
   }
 };
 
