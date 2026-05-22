@@ -26,16 +26,15 @@ export type CartSummary = {
 
 /** Resolves cart items to full lines with computed totals. */
 export function buildCartSummary(items: CartItem[]): CartSummary {
-  const lines: CartLine[] = items
-    .map((i) => {
-      const product = products.find((p) => p.slug === i.slug);
-      if (!product) return null;
-      // Prefer offer price; fall back to regular price
-      const unitPrice = product.offerPrice ?? product.regularPrice;
-      const lineTotal = unitPrice != null ? unitPrice * i.qty : undefined;
-      return { product, qty: i.qty, unitPrice, lineTotal };
-    })
-    .filter((x): x is CartLine => x !== null);
+  const lines: CartLine[] = items.flatMap((i) => {
+    const product = products.find((p) => p.slug === i.slug);
+    if (!product) return [];
+    // Prefer offer price; fall back to regular price
+    const unitPrice = product.offerPrice ?? product.regularPrice;
+    const lineTotal = unitPrice != null ? unitPrice * i.qty : undefined;
+    const line: CartLine = { product, qty: i.qty, unitPrice, lineTotal };
+    return [line];
+  });
 
   const subtotal = lines.reduce((s, l) => s + (l.lineTotal ?? 0), 0);
   const itemsWithoutPriceCount = lines.filter((l) => l.lineTotal == null).length;
