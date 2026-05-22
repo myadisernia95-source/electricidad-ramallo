@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: #8b2c2c;
+  --color-cream: #f5efe6;
+  --color-ink: #1f1b1b;
+}
+
+html, body {
+  background-color: #fbf8f3;
+  color: var(--color-ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Long-form article typography (manual Tailwind-prose substitute) */
+.guide-content > * + * { margin-top: 1rem; }
+.guide-content > .lead { font-size: 1.15rem; line-height: 1.65; color: #2E2828; }
+.guide-content h2 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1F1B1B;
+  letter-spacing: -0.01em;
+}
+.guide-content h3 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+  color: #1F1B1B;
+}
+.guide-content p { color: #2E2828; }
+.guide-content ul,
+.guide-content ol {
+  margin-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #2E2828;
+}
+.guide-content ul { list-style: disc; }
+.guide-content ol { list-style: decimal; }
+.guide-content ul ul,
+.guide-content ol ol { margin-top: 0.5rem; }
+.guide-content strong { color: #1F1B1B; font-weight: 700; }
+.guide-content a { color: #8B2C2C; text-decoration: underline; text-underline-offset: 2px; }
+.guide-content a:hover { color: #6E1F1F; }
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-semibold transition-all duration-200 text-sm tracking-wide;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-white hover:bg-brand-dark shadow-sm hover:shadow-md;
+  }
+  .btn-secondary {
+    @apply btn bg-cream-200 text-ink hover:bg-cream-300;
+  }
+  .btn-outline {
+    @apply btn border-2 border-brand text-brand hover:bg-brand hover:text-white;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white hover:bg-[#1ebe5a] shadow-sm hover:shadow-md;
+  }
+  .section {
+    @apply py-16 md:py-20;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold text-ink tracking-tight;
+  }
+  .section-eyebrow {
+    @apply text-brand text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-3;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card overflow-hidden;
+  }
+}

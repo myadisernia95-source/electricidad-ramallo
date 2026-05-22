@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "Início",
+    "catalog": "Catálogo",
+    "categories": "Categorias",
+    "offers": "Ofertas",
+    "about": "Sobre nós",
+    "contact": "Contato",
+    "cart": "Carrinho",
+    "guides": "Guias",
+    "whatsapp": "WhatsApp"
+  },
+  "cart": {
+    "title": "Seu carrinho",
+    "metaDescription": "Seu carrinho de compras na Electricidad Ramallo. Finalize seu pedido e envie pelo WhatsApp.",
+    "eyebrow": "Carrinho de compras",
+    "subtitle": "Revise seu pedido e envie pelo WhatsApp. Respondemos para combinar pagamento e entrega.",
+    "loading": "Carregando…",
+    "viewCart": "Ver carrinho",
+    "add": "Adicionar ao carrinho",
+    "added": "Adicionado",
+    "remove": "Remover",
+    "clearAll": "Esvaziar carrinho",
+    "continueShopping": "Continuar comprando",
+    "increase": "Aumentar",
+    "decrease": "Diminuir",
+    "summary": "Resumo do pedido",
+    "itemsCount": "Itens no pedido",
+    "subtotal": "Subtotal",
+    "toConfirm": "a confirmar",
+    "priceOnRequest": "Preço sob consulta",
+    "itemsToConfirm": "{count, plural, =1 {1 item com preço a confirmar} other {# itens com preço a confirmar}}",
+    "submitOrder": "Enviar pedido pelo WhatsApp",
+    "submitHint": "O envio abre seu WhatsApp com o pedido pronto para nos mandar.",
+    "empty": {
+      "title": "Seu carrinho está vazio",
+      "body": "Explore nosso catálogo e adicione produtos para montar seu pedido.",
+      "cta": "Ver catálogo"
+    },
+    "form": {
+      "name": "Seu nome (opcional)",
+      "namePlaceholder": "Como você se chama",
+      "delivery": "Modo de entrega",
+      "pickup": "Retirar na loja (Ramallo 2339, Núñez)",
+      "shipping": "Entrega em domicílio",
+      "address": "Endereço ou zona de entrega",
+      "addressPlaceholder": "Ex: Belgrano, Buenos Aires",
+      "notes": "Observações (opcional)",
+      "notesPlaceholder": "Alguma observação"
+    }
+  },
+  "hero": {
+    "eyebrow": "Sua loja de confiança em Núñez, Buenos Aires",
+    "title": "Materiais elétricos de qualidade para sua obra",
+    "subtitle": "40 anos abastecendo construtoras, prédios, condomínios e particulares. Atendimento personalizado e entregas em Buenos Aires.",
+    "ctaPrimary": "Falar pelo WhatsApp",
+    "ctaSecondary": "Ver catálogo"
+  },
+  "trust": {
+    "years": "40 anos no bairro",
+    "shipping": "Entregas em CABA e AMBA",
+    "wholesale": "Preços de atacado",
+    "advisory": "Assessoria técnica"
+  },
+  "categories": {
+    "title": "Nossas categorias",
+    "subtitle": "Tudo o que você precisa para sua instalação elétrica",
+    "viewAll": "Ver produtos",
+    "iluminacion": {
+      "name": "Iluminação",
+      "desc": "Lâmpadas LED, baixo consumo, dicroicas e mais",
+      "long": "Linha completa de iluminação residencial e comercial: lâmpadas LED de baixo consumo Philips, dicroicas Philips GU10, tubos LED, plafons e refletores. Tudo o que você precisa para iluminar sua casa, loja ou instalação profissional com marcas reconhecidas."
+    },
+    "cables": {
+      "name": "Cabos & Condução",
+      "desc": "Cabos Argenplas, eletrodutos, acessórios",
+      "long": "Cabos elétricos unipolares Argenplas 1,5 mm², 2,5 mm² e 4 mm² para instalações residenciais e industriais. Isolação PVC antichamas, norma IRAM NM 247-3. Eletrodutos corrugados, acessórios e tudo para o cabeamento de sua obra."
+    },
+    "tableros": {
+      "name": "Quadros & Disjuntores",
+      "desc": "Disjuntores ABB e Siemens",
+      "long": "Disjuntores termomagnéticos e diferenciais (DRs) ABB e Siemens para quadros residenciais e industriais. Curvas B, C e D, sensibilidades de 30 mA e 300 mA. Conforme regulamentação AEA 90364. Estoque permanente das séries S200 (ABB) e 5SL/5SM (Siemens)."
+    },
+    "materiales": {
+      "name": "Material Elétrico",
+      "desc": "Tomadas, espelhos e acessórios Cambre XXI",
+      "long": "Linha completa Cambre Siglo XXI e XXII: módulos schuko, tomadas universais, interruptores, dimmers, tomadas USB, espelhos brancos, prata e alumínio, suportes. Material premium argentino para acabamento de instalações elétricas em residências, escritórios e lojas."
+    }
+  },
+  "offers": {
+    "title": "Ofertas relâmpago",
+    "subtitle": "Produtos selecionados com preço especial. Consulte disponibilidade pelo WhatsApp.",
+    "badge": "Oferta",
+    "consult": "Consultar"
+  },
+  "featured": {
+    "title": "Mais procurados",
+    "subtitle": "Os produtos que mais nos pedem"
+  },
+  "shipping": {
+    "title": "Entregas e formas de pagamento",
+    "shippingTitle": "Fazemos entregas",
+    "shippingText": "Entregamos em CABA e Grande Buenos Aires. Compra mínima de $150.000 ARS para frete grátis. Outras zonas, consulte.",
+    "paymentTitle": "Aceitamos",
+    "paymentMethods": "Mercado Pago · Transferência · Cartões · Dinheiro na loja"
+  },
+  "instagram": {
+    "title": "Siga-nos no Instagram",
+    "subtitle": "Novidades, dicas e ofertas em @electricidadramallo",
+    "cta": "Ver perfil"
+  },
+  "newsletter": {
+    "title": "Assine nossa newsletter",
+    "subtitle": "Saiba primeiro sobre novidades, ofertas e dicas.",
+    "placeholder": "Seu e-mail",
+    "submit": "Assinar",
+    "success": "Obrigado! Entraremos em contato em breve.",
+    "error": "Algo deu errado. Tente novamente.",
+    "consent": "Ao assinar, você aceita receber comunicações da Electricidad Ramallo."
+  },
+  "product": {
+    "consultWhatsapp": "Consultar pelo WhatsApp",
+    "noPrice": "Preço: sob consulta",
+    "regularPrice": "Preço regular",
+    "offerPrice": "Oferta",
+    "offerBadge": "Oferta",
+    "discount": "{percent}% OFF",
+    "category": "Categoria",
+    "brand": "Marca",
+    "back": "Voltar ao catálogo",
+    "specs": "Especificações",
+    "description": "Descrição"
+  },
+  "about": {
+    "title": "Sobre nós",
+    "eyebrow": "Electricidad Ramallo",
+    "lead": "Empresa familiar com mais de 40 anos acompanhando obras e construções em Buenos Aires. Sua distribuidora elétrica de confiança.",
+    "p1": "Na Electricidad Ramallo somos uma empresa familiar com mais de 40 anos de trajetória no ramo elétrico, acompanhando o crescimento de obras e construções em Buenos Aires e na Grande Buenos Aires.",
+    "p2": "Ao longo dessas décadas construímos vínculos sólidos com nossos clientes, baseados na confiança, na orientação honesta e na qualidade de cada produto que oferecemos. Trabalhamos com as melhores marcas do mercado para que cada instalação esteja respaldada por materiais que rendem e duram.",
+    "p3": "Sabemos que por trás de cada pedido há um projeto importante, e por isso colocamos o mesmo compromisso tanto numa grande obra quanto num reparo pontual. Somos sua distribuidora elétrica de confiança, hoje e sempre. ⚡",
+    "valuesTitle": "O que nos define",
+    "value1Title": "Trajetória",
+    "value1": "Mais de 40 anos no ramo elétrico nos respaldam.",
+    "value2Title": "Orientação honesta",
+    "value2": "Recomendamos o que você realmente precisa, não o mais caro.",
+    "value3Title": "Qualidade",
+    "value3": "Trabalhamos apenas com as melhores marcas: ABB, Siemens, Cambre, Philips, Argenplas.",
+    "value4Title": "Compromisso",
+    "value4": "Mesmo nível de atendimento para uma grande obra ou um reparo pontual."
+  },
+  "contact": {
+    "title": "Contato",
+    "lead": "Estamos aqui para ajudar. Fale pelo WhatsApp ou passe na loja.",
+    "addressLabel": "Endereço",
+    "address": "Ramallo 2339, Núñez, Buenos Aires",
+    "phoneLabel": "WhatsApp",
+    "phone": "+54 9 11 3603-0603",
+    "hoursLabel": "Horário",
+    "hours": "Segunda a sexta, das 9h às 17h",
+    "emailLabel": "Email",
+    "mapTitle": "Como chegar"
+  },
+  "whatsappWidget": {
+    "label": "Falar pelo WhatsApp",
+    "presetMessage": "Olá Electricidad Ramallo, gostaria de fazer uma consulta."
+  },
+  "footer": {
+    "tagline": "Materiais elétricos · Núñez, Buenos Aires · Desde 1986",
+    "shop": "Loja",
+    "company": "Empresa",
+    "contact": "Contato",
+    "follow": "Siga-nos",
+    "rights": "Todos os direitos reservados.",
+    "developedBy": "Site feito com carinho em Buenos Aires."
+  },
+  "search": {
+    "placeholder": "Buscar produtos…",
+    "submit": "Buscar",
+    "title": "Resultados da busca",
+    "query": "Você buscou",
+    "noQuery": "Digite o que você está procurando acima.",
+    "noResults": "Nenhum produto encontrado para «{q}».",
+    "noResultsHint": "Tente menos palavras ou nos consulte pelo WhatsApp — conseguimos para você.",
+    "exactTitle": "Resultados para «{q}»",
+    "approxTitle": "Produtos similares",
+    "approxHint": "Sem correspondências exatas. Estes são os mais parecidos:",
+    "resultsCount": "{count, plural, =1 {1 resultado} other {# resultados}}"
+  },
+  "language": "Idioma",
+  "common": {
+    "loading": "Carregando...",
+    "consult": "Consultar"
+  }
+}

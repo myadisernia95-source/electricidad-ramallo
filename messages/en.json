@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "categories": "Categories",
+    "offers": "Deals",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "guides": "Guides",
+    "whatsapp": "WhatsApp"
+  },
+  "cart": {
+    "title": "Your cart",
+    "metaDescription": "Your shopping cart at Electricidad Ramallo. Finish your order and send it via WhatsApp.",
+    "eyebrow": "Shopping cart",
+    "subtitle": "Review your order and send it via WhatsApp. We'll reply to confirm payment and delivery.",
+    "loading": "Loading…",
+    "viewCart": "View cart",
+    "add": "Add to cart",
+    "added": "Added",
+    "remove": "Remove",
+    "clearAll": "Clear cart",
+    "continueShopping": "Continue shopping",
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "summary": "Order summary",
+    "itemsCount": "Items in order",
+    "subtotal": "Subtotal",
+    "toConfirm": "to be confirmed",
+    "priceOnRequest": "Price on request",
+    "itemsToConfirm": "{count, plural, =1 {1 item with price to confirm} other {# items with price to confirm}}",
+    "submitOrder": "Send order via WhatsApp",
+    "submitHint": "Sending opens WhatsApp with the order ready to send.",
+    "empty": {
+      "title": "Your cart is empty",
+      "body": "Browse our catalog and add products to build your order.",
+      "cta": "Browse catalog"
+    },
+    "form": {
+      "name": "Your name (optional)",
+      "namePlaceholder": "What's your name",
+      "delivery": "Delivery method",
+      "pickup": "Pick up in store (Ramallo 2339, Núñez)",
+      "shipping": "Home delivery",
+      "address": "Delivery address or zone",
+      "addressPlaceholder": "e.g. Belgrano, Buenos Aires",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Any special request"
+    }
+  },
+  "hero": {
+    "eyebrow": "Your trusted electrical store in Núñez, Buenos Aires",
+    "title": "Quality electrical materials for your project",
+    "subtitle": "40 years supplying construction companies, buildings, building associations and individuals. Personalized service and delivery across Buenos Aires.",
+    "ctaPrimary": "Chat on WhatsApp",
+    "ctaSecondary": "Browse catalog"
+  },
+  "trust": {
+    "years": "40 years in the neighborhood",
+    "shipping": "Delivery in CABA & AMBA",
+    "wholesale": "Wholesale pricing",
+    "advisory": "Technical advice"
+  },
+  "categories": {
+    "title": "Our categories",
+    "subtitle": "Everything you need for your electrical installation",
+    "viewAll": "View products",
+    "iluminacion": {
+      "name": "Lighting",
+      "desc": "LED, low-consumption, dichroic and more",
+      "long": "Full range of residential and commercial lighting: low-consumption Philips LED bulbs, Philips GU10 dichroic spots, LED tubes, ceiling lights and floodlights. Everything you need to light your home, store or professional installation with trusted brands and guaranteed energy efficiency."
+    },
+    "cables": {
+      "name": "Cables & Conduit",
+      "desc": "Argenplas cables, conduit, accessories",
+      "long": "Argenplas 1.5 mm², 2.5 mm² and 4 mm² single-conductor electrical cables for home and industrial installations. PVC flame-retardant insulation, IRAM NM 247-3 standard. Corrugated conduit, accessories and everything you need for wiring your project in Buenos Aires and Greater Buenos Aires."
+    },
+    "tableros": {
+      "name": "Breakers & Panels",
+      "desc": "ABB and Siemens breakers and RCDs",
+      "long": "Thermomagnetic circuit breakers and residual-current devices (RCDs) from ABB and Siemens for residential and industrial panels. B, C and D curves, 30 mA and 300 mA sensitivities. Compliant with AEA 90364 regulation. Permanent stock of S200 (ABB) and 5SL/5SM (Siemens) series."
+    },
+    "materiales": {
+      "name": "Electrical Hardware",
+      "desc": "Plugs, plates and Cambre XXI accessories",
+      "long": "Complete Cambre Siglo XXI and XXII line: schuko modules, universal outlets, light switches, dimmers, USB outlets, white/silver/aluminum cover plates and frames. Premium Argentine hardware for finishing electrical installations in homes, offices and retail spaces."
+    }
+  },
+  "offers": {
+    "title": "Flash deals",
+    "subtitle": "Selected items at special prices. Ask availability on WhatsApp.",
+    "badge": "Deal",
+    "consult": "Inquire"
+  },
+  "featured": {
+    "title": "Most requested",
+    "subtitle": "The items our customers ask for most"
+  },
+  "shipping": {
+    "title": "Shipping & payment",
+    "shippingTitle": "We ship",
+    "shippingText": "We deliver across CABA and Greater Buenos Aires. Free shipping over $150,000 ARS. For other areas, ask us.",
+    "paymentTitle": "We accept",
+    "paymentMethods": "Mercado Pago · Bank transfer · Credit cards · Cash in store"
+  },
+  "instagram": {
+    "title": "Follow us on Instagram",
+    "subtitle": "News, tips and deals at @electricidadramallo",
+    "cta": "View profile"
+  },
+  "newsletter": {
+    "title": "Join our newsletter",
+    "subtitle": "Be the first to know about new arrivals, deals and tips.",
+    "placeholder": "Your email",
+    "submit": "Subscribe",
+    "success": "Thanks! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again.",
+    "consent": "By subscribing you agree to receive communications from Electricidad Ramallo."
+  },
+  "product": {
+    "consultWhatsapp": "Ask on WhatsApp",
+    "noPrice": "Price: on request",
+    "regularPrice": "Regular price",
+    "offerPrice": "Sale",
+    "offerBadge": "Sale",
+    "discount": "{percent}% OFF",
+    "category": "Category",
+    "brand": "Brand",
+    "back": "Back to catalog",
+    "specs": "Specifications",
+    "description": "Description"
+  },
+  "about": {
+    "title": "About us",
+    "eyebrow": "Electricidad Ramallo",
+    "lead": "Family business with over 40 years supporting construction projects across Buenos Aires. Your trusted electrical supplier.",
+    "p1": "Electricidad Ramallo is a family business with over 40 years of experience in the electrical industry, supporting construction projects across the city of Buenos Aires and Greater Buenos Aires.",
+    "p2": "Over the decades we've built lasting relationships with our customers, grounded in trust, honest advice and the quality of every product we offer. We work with the best brands on the market so that every installation is backed by materials that perform and last.",
+    "p3": "We know there's an important project behind every order, and that's why we bring the same commitment whether it's a major construction site or a small repair. We're your trusted electrical supplier, today and always. ⚡",
+    "valuesTitle": "What defines us",
+    "value1Title": "Track record",
+    "value1": "Over 40 years in the electrical industry back us up.",
+    "value2Title": "Honest advice",
+    "value2": "We recommend what you actually need, not the most expensive option.",
+    "value3Title": "Quality",
+    "value3": "We only work with the best brands: ABB, Siemens, Cambre, Philips, Argenplas.",
+    "value4Title": "Commitment",
+    "value4": "Same level of care for a major construction site or a small repair."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "We're here to help. Message us on WhatsApp or visit the store.",
+    "addressLabel": "Address",
+    "address": "Ramallo 2339, Núñez, Buenos Aires",
+    "phoneLabel": "WhatsApp",
+    "phone": "+54 9 11 3603-0603",
+    "hoursLabel": "Hours",
+    "hours": "Monday to Friday, 9 am to 5 pm",
+    "emailLabel": "Email",
+    "mapTitle": "Get directions"
+  },
+  "whatsappWidget": {
+    "label": "Chat on WhatsApp",
+    "presetMessage": "Hi Electricidad Ramallo, I have a question."
+  },
+  "footer": {
+    "tagline": "Electrical materials · Núñez, Buenos Aires · Since 1986",
+    "shop": "Shop",
+    "company": "Company",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
+    "developedBy": "Site crafted with care in Buenos Aires."
+  },
+  "search": {
+    "placeholder": "Search products…",
+    "submit": "Search",
+    "title": "Search results",
+    "query": "You searched",
+    "noQuery": "Type what you're looking for above.",
+    "noResults": "No products found for \"{q}\".",
+    "noResultsHint": "Try fewer words or ask us on WhatsApp — we'll get it for you.",
+    "exactTitle": "Results for \"{q}\"",
+    "approxTitle": "Similar products",
+    "approxHint": "No exact matches. Here are the closest ones:",
+    "resultsCount": "{count, plural, =1 {1 result} other {# results}}"
+  },
+  "language": "Language",
+  "common": {
+    "loading": "Loading...",
+    "consult": "Inquire"
+  }
+}
