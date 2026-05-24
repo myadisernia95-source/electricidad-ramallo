@@ -20,6 +20,20 @@ export default function CartPage() {
 
   const summary = useMemo(() => buildCartSummary(items), [items]);
 
+  // Compute the WhatsApp URL live as the form changes so the anchor below
+  // always has a fresh, ready-to-click href. Anchor + target="_blank" is far
+  // more reliable than window.open (no popup blockers, no async issues).
+  const whatsappUrl = useMemo(() => {
+    if (summary.lines.length === 0) return '#';
+    const message = buildOrderMessage(summary, {
+      customerName,
+      deliveryMode,
+      shippingAddress,
+      notes
+    });
+    return whatsappLink(message);
+  }, [summary, customerName, deliveryMode, shippingAddress, notes]);
+
   if (!isHydrated) {
     return (
       <section className="section">
@@ -46,16 +60,23 @@ export default function CartPage() {
     );
   }
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const message = buildOrderMessage(summary, {
-      customerName,
-      deliveryMode,
-      shippingAddress,
-      notes
-    });
-    const url = whatsappLink(message);
-    window.open(url, '_blank', 'noopener,noreferrer');
+  // Belt-and-suspenders fallback: if the anchor's default action fails for any
+  // reason (e.g. extension blocked it), force-navigate via window.location.
+  // This still triggers the WhatsApp deep-link on mobile and WhatsApp Web on
+  // desktop, but loses the new-tab behaviour.
+  const onWhatsAppClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
+    if (whatsappUrl === '#') {
+      e.preventDefault();
+      return;
+    }
+    // Let the browser handle the default <a target="_blank"> navigation.
+    // If, after 500 ms, the user is still on the cart page (popup blocked),
+    // we navigate in-place as a fallback.
+    window.setTimeout(() => {
+      if (document.visibilityState === 'visible') {
+        try { window.location.href = whatsappUrl; } catch { /* noop */ }
+      }
+    }, 500);
   };
 
   return (
@@ -190,7 +211,7 @@ export default function CartPage() {
               )}
             </dl>
 
-            <form onSubmit={onSubmit} className="mt-6 pt-6 border-t border-cream-200 space-y-4">
+            <form onSubmit={(e) => e.preventDefault()} className="mt-6 pt-6 border-t border-cream-200 space-y-4">
               <div>
                 <label htmlFor="cust-name" className="block text-xs font-bold uppercase tracking-widest text-ink-mute mb-1.5">
                   {t('form.name')}
@@ -265,12 +286,19 @@ export default function CartPage() {
                 />
               </div>
 
-              <button type="submit" className="btn-whatsapp w-full text-base py-3">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onWhatsAppClick}
+                className="btn-whatsapp w-full text-base py-3"
+                aria-disabled={whatsappUrl === '#'}
+              >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
                   <path d="M20.52 3.48A11.78 11.78 0 0 0 12.06 0C5.5 0 .2 5.3.2 11.86c0 2.09.55 4.13 1.58 5.93L0 24l6.36-1.67a11.83 11.83 0 0 0 5.7 1.45c6.55 0 11.86-5.3 11.86-11.86 0-3.17-1.23-6.15-3.41-8.44Z" />
                 </svg>
                 {t('submitOrder')}
-              </button>
+              </a>
 
               <p className="text-[11px] text-ink-mute leading-snug text-center">
                 {t('submitHint')}
