@@ -48,6 +48,7 @@ export default function ProductCard({ product, showOfferBadge }: Props) {
           <PriceBlock
             regularPrice={product.regularPrice}
             offerPrice={product.offerPrice}
+            unit={product.unit}
             size="sm"
           />
 

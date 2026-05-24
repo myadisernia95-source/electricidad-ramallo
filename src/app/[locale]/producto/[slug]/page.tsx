@@ -104,6 +104,7 @@ export default async function ProductPage({
               <PriceBlock
                 regularPrice={product.regularPrice}
                 offerPrice={product.offerPrice}
+                unit={product.unit}
                 size="lg"
               />
             </div>

@@ -5,10 +5,18 @@ type Props = {
   regularPrice?: number;
   offerPrice?: number;
   size?: 'sm' | 'lg';
+  /** Optional unit label appended to the price, e.g. "metro" → "$1.338 /metro". */
+  unit?: 'unidad' | 'metro' | 'rollo' | 'caja';
 };
 
-export default function PriceBlock({ regularPrice, offerPrice, size = 'sm' }: Props) {
+function unitSuffix(unit?: Props['unit']): string {
+  if (!unit || unit === 'unidad') return '';
+  return ` /${unit}`;
+}
+
+export default function PriceBlock({ regularPrice, offerPrice, size = 'sm', unit }: Props) {
   const t = useTranslations('product');
+  const suffix = unitSuffix(unit);
 
   // No prices set → show "consultar"
   if (!regularPrice && !offerPrice) {
@@ -27,6 +35,7 @@ export default function PriceBlock({ regularPrice, offerPrice, size = 'sm' }: Pr
         }
       >
         {formatARS(single)}
+        {suffix && <span className="text-sm font-medium text-ink-mute ml-1">{suffix}</span>}
       </p>
     );
   }
@@ -41,6 +50,7 @@ export default function PriceBlock({ regularPrice, offerPrice, size = 'sm' }: Pr
         </span>
         <span className="font-display text-3xl md:text-4xl font-bold text-brand">
           {formatARS(offerPrice)}
+          {suffix && <span className="text-base font-medium text-ink-mute ml-1">{suffix}</span>}
         </span>
         <span className="inline-flex items-center gap-1 bg-brand text-white text-[11px] font-bold uppercase tracking-wider px-2 py-1 rounded-md">
           {t('offerBadge')} −{pct}%
@@ -53,9 +63,10 @@ export default function PriceBlock({ regularPrice, offerPrice, size = 'sm' }: Pr
       <span className="text-xs text-ink-mute line-through">
         {formatARS(regularPrice)}
       </span>
-      <div className="flex items-baseline gap-2">
+      <div className="flex items-baseline gap-2 flex-wrap">
         <span className="font-display text-lg font-bold text-brand">
           {formatARS(offerPrice)}
+          {suffix && <span className="text-xs font-medium text-ink-mute ml-1">{suffix}</span>}
         </span>
         <span className="text-[10px] font-bold uppercase tracking-wider text-brand bg-brand-100 px-1.5 py-0.5 rounded">
           −{pct}%

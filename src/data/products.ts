@@ -9,6 +9,8 @@ export type Product = {
   shortDesc: string;
   description: string;
   specs?: { label: string; value: string }[];
+  /** Unidad de venta visible al cliente (ej: "metro", "rollo", "unidad"). Por defecto "unidad". */
+  unit?: 'unidad' | 'metro' | 'rollo' | 'caja';
   /** Precio "tachado" / sin descuento, en pesos argentinos (sin centavos). */
   regularPrice?: number;
   /** Precio promocional, en pesos argentinos. Si está presente, marca el producto como en oferta. */
@@ -16,10 +18,14 @@ export type Product = {
   /** Marca manual para mostrar en sección "Ofertas" aunque no haya precio. */
   offer?: boolean;
   featured?: boolean;
+  /** Código interno del fabricante / depósito (no se muestra al cliente). */
+  internalCode?: string;
 };
 
 export const products: Product[] = [
-  // CABLES
+  // ==========================================================================
+  // CABLES & CONDUCCIONES
+  // ==========================================================================
   {
     slug: 'cable-argenplas-1-5mm',
     name: 'Cable Argenplas 1,5 mm²',
@@ -36,7 +42,7 @@ export const products: Product[] = [
       { label: 'Color', value: 'Varios' }
     ],
     regularPrice: 53655,
-    offerPrice: 49500,
+    offerPrice: 51900,
     featured: true
   },
   {
@@ -54,7 +60,7 @@ export const products: Product[] = [
       { label: 'Norma', value: 'IRAM NM 247-3' }
     ],
     regularPrice: 86578,
-    offerPrice: 76500,
+    offerPrice: 82250,
     featured: true
   },
   {
@@ -71,11 +77,295 @@ export const products: Product[] = [
       { label: 'Tensión nominal', value: '450/750 V' },
       { label: 'Norma', value: 'IRAM NM 247-3' }
     ],
-    regularPrice: 138773,
-    offerPrice: 117000
+    regularPrice: 138700,
+    offerPrice: 131000
+  },
+  {
+    slug: 'cable-taller-tpr-3x1mm',
+    name: 'Cable Tipo Taller TPR 3x1,00 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable tipo taller TPR 3x1 mm² · venta por metro · uso flexible.',
+    description:
+      'Cable tipo taller TPR (Tetra Polychlorohexane Rubber) de 3x1 mm². Diseño flexible con cubierta de goma resistente, ideal para alargues, herramientas portátiles, electrodomésticos y conexiones móviles en obra o taller.\n\nVenta por metro. Cumple normas IRAM. Stock permanente en Electricidad Ramallo, Núñez.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '1,00 mm²' },
+      { label: 'Tipo', value: 'TPR (taller)' }
+    ],
+    regularPrice: 1408,
+    offerPrice: 1338,
+    internalCode: 'TPR-3X1.00'
+  },
+  {
+    slug: 'cable-taller-tpr-3x1-5mm',
+    name: 'Cable Tipo Taller TPR 3x1,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable tipo taller TPR 3x1,50 mm² · venta por metro · uso flexible.',
+    description:
+      'Cable tipo taller TPR de 3x1,50 mm². Sección intermedia ideal para alargues robustos, herramientas eléctricas de mediana potencia y conexiones flexibles que necesitan más capacidad de corriente que el 3x1.\n\nVenta por metro. Cubierta de goma resistente al desgaste. Stock permanente.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '1,50 mm²' },
+      { label: 'Tipo', value: 'TPR (taller)' }
+    ],
+    regularPrice: 2150,
+    offerPrice: 2043,
+    internalCode: 'TPR-3X1.50'
+  },
+  {
+    slug: 'cable-taller-tpr-3x2-5mm',
+    name: 'Cable Tipo Taller TPR 3x2,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable tipo taller TPR 3x2,50 mm² · venta por metro · alta exigencia.',
+    description:
+      'Cable tipo taller TPR de 3x2,50 mm². Sección reforzada para uso con herramientas pesadas, máquinas industriales, alargues de obra y conexiones móviles de alto consumo.\n\nVenta por metro. Cubierta de goma resistente. Stock permanente para profesionales en CABA y AMBA.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '2,50 mm²' },
+      { label: 'Tipo', value: 'TPR (taller)' }
+    ],
+    regularPrice: 3476,
+    offerPrice: 3302,
+    internalCode: 'TPR-3X2.50'
+  },
+  {
+    slug: 'cable-subterraneo-2x1-5mm',
+    name: 'Cable Subterráneo 2x1,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 2x1,50 mm² · venta por metro · para instalación enterrada.',
+    description:
+      'Cable subterráneo 2x1,50 mm² con aislación reforzada para enterrar directamente o pasar en cañería bajo tierra. Apto para conexiones exteriores, iluminación de jardín, postes, y derivaciones de tablero seccional.\n\nCumple normas IRAM. Venta por metro. Stock permanente.',
+    specs: [
+      { label: 'Conformación', value: '2 conductores' },
+      { label: 'Sección', value: '1,50 mm²' },
+      { label: 'Uso', value: 'Subterráneo' }
+    ],
+    regularPrice: 1922,
+    offerPrice: 1826
+  },
+  {
+    slug: 'cable-subterraneo-2x2-5mm',
+    name: 'Cable Subterráneo 2x2,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 2x2,50 mm² · venta por metro · para instalación enterrada.',
+    description:
+      'Cable subterráneo 2x2,50 mm² para enterrar o cañería subterránea. Sección intermedia para circuitos de uso mediano, ideal para postes de iluminación, portones automáticos y conexiones de bombas o equipos exteriores.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '2 conductores' },
+      { label: 'Sección', value: '2,50 mm²' },
+      { label: 'Uso', value: 'Subterráneo' }
+    ],
+    regularPrice: 2683,
+    offerPrice: 2549
+  },
+  {
+    slug: 'cable-subterraneo-3x1-5mm',
+    name: 'Cable Subterráneo 3x1,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 3x1,50 mm² · venta por metro · incluye tierra.',
+    description:
+      'Cable subterráneo 3x1,50 mm² (fase + neutro + tierra) para instalaciones enterradas que requieren puesta a tierra. Ideal para iluminación exterior con jabalina, motores chicos en patio o jardín y derivaciones para galpones.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '1,50 mm²' },
+      { label: 'Uso', value: 'Subterráneo' }
+    ],
+    regularPrice: 2567,
+    offerPrice: 2439
+  },
+  {
+    slug: 'cable-subterraneo-3x2-5mm',
+    name: 'Cable Subterráneo 3x2,50 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 3x2,50 mm² · venta por metro · incluye tierra.',
+    description:
+      'Cable subterráneo 3x2,50 mm² con conductor de tierra. Sección recomendada para tomas exteriores enterrados, bombas de agua, portones eléctricos y derivaciones a galpones o casillas.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '2,50 mm²' },
+      { label: 'Uso', value: 'Subterráneo' }
+    ],
+    regularPrice: 3830,
+    offerPrice: 3639
+  },
+  {
+    slug: 'cable-subterraneo-3x4mm',
+    name: 'Cable Subterráneo 3x4,00 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 3x4 mm² · venta por metro · alta corriente con tierra.',
+    description:
+      'Cable subterráneo 3x4 mm² (fase + neutro + tierra) para circuitos enterrados de alta demanda. Ideal para alimentar tableros secundarios en quinchos, talleres separados de la vivienda y motores trifásicos chicos.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '3 conductores' },
+      { label: 'Sección', value: '4,00 mm²' },
+      { label: 'Uso', value: 'Subterráneo' }
+    ],
+    regularPrice: 5655,
+    offerPrice: 5372
+  },
+  {
+    slug: 'cable-subterraneo-4x4mm',
+    name: 'Cable Subterráneo 4x4,00 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 4x4 mm² · venta por metro · trifásico.',
+    description:
+      'Cable subterráneo 4x4 mm² (3 fases + neutro o 3 fases + tierra) para alimentación trifásica enterrada. Ideal para tableros principales de comercios, galpones industriales y motores trifásicos.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '4 conductores' },
+      { label: 'Sección', value: '4,00 mm²' },
+      { label: 'Uso', value: 'Subterráneo trifásico' }
+    ],
+    regularPrice: 7264,
+    offerPrice: 6901
+  },
+  {
+    slug: 'cable-subterraneo-4x6mm',
+    name: 'Cable Subterráneo 4x6,00 mm²',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    unit: 'metro',
+    shortDesc: 'Cable subterráneo 4x6 mm² · venta por metro · trifásico reforzado.',
+    description:
+      'Cable subterráneo 4x6 mm² para instalaciones trifásicas de alta corriente. Recomendado para alimentación de tableros generales en obra mediana, galpones industriales y conexiones de empresa.\n\nCumple normas IRAM. Venta por metro.',
+    specs: [
+      { label: 'Conformación', value: '4 conductores' },
+      { label: 'Sección', value: '6,00 mm²' },
+      { label: 'Uso', value: 'Subterráneo trifásico' }
+    ],
+    regularPrice: 10309,
+    offerPrice: 9794
+  },
+  {
+    slug: 'bandeja-portacable-10cm',
+    name: 'Bandeja Portacable 10 cm',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Bandeja portacable de 10 cm de ancho para conducción ordenada.',
+    description:
+      'Bandeja portacable de 10 cm de ancho para tendido prolijo de cables en obra, sótanos, galpones y oficinas. Permite agrupar varios cables en una conducción organizada, accesible para mantenimiento y ampliaciones futuras.\n\nLargo estándar 3 metros por unidad. Tratamiento anticorrosivo. Stock permanente en Electricidad Ramallo.',
+    specs: [
+      { label: 'Ancho', value: '10 cm' },
+      { label: 'Largo', value: '3 m' }
+    ],
+    regularPrice: 16905,
+    offerPrice: 16060
+  },
+  {
+    slug: 'bandeja-portacable-15cm',
+    name: 'Bandeja Portacable 15 cm',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Bandeja portacable de 15 cm de ancho · uso medio.',
+    description:
+      'Bandeja portacable de 15 cm de ancho para tendido de cables en instalaciones medianas. Apta para múltiples ramales y conducciones de oficinas, comercios y obras nuevas.\n\nLargo estándar 3 metros por unidad. Tratamiento anticorrosivo.',
+    specs: [
+      { label: 'Ancho', value: '15 cm' },
+      { label: 'Largo', value: '3 m' }
+    ],
+    regularPrice: 19175,
+    offerPrice: 18216
+  },
+  {
+    slug: 'bandeja-portacable-20cm',
+    name: 'Bandeja Portacable 20 cm',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Bandeja portacable de 20 cm de ancho · uso industrial.',
+    description:
+      'Bandeja portacable de 20 cm para instalaciones industriales o de gran porte. Acepta gran cantidad de cables de potencia y datos en una sola conducción ordenada.\n\nLargo estándar 3 metros. Tratamiento anticorrosivo.',
+    specs: [
+      { label: 'Ancho', value: '20 cm' },
+      { label: 'Largo', value: '3 m' }
+    ],
+    regularPrice: 22700,
+    offerPrice: 21565
+  },
+  {
+    slug: 'bandeja-portacable-30cm',
+    name: 'Bandeja Portacable 30 cm',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Bandeja portacable de 30 cm de ancho · uso industrial pesado.',
+    description:
+      'Bandeja portacable de 30 cm de ancho para instalaciones industriales pesadas, datacenters y galpones donde se requiere alta capacidad de conducción.\n\nLargo estándar 3 metros. Tratamiento anticorrosivo. Stock por encargo.',
+    specs: [
+      { label: 'Ancho', value: '30 cm' },
+      { label: 'Largo', value: '3 m' }
+    ],
+    regularPrice: 29600,
+    offerPrice: 28120
+  },
+  {
+    slug: 'union-bandeja-portacable',
+    name: 'Unión de Bandeja Portacable',
+    brand: 'Genérico',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Accesorio de unión entre tramos de bandeja portacable.',
+    description:
+      'Accesorio metálico de unión entre dos tramos de bandeja portacable. Incluye tornillería. Compatible con bandejas de 10, 15, 20 y 30 cm.\n\nEsencial para continuar el tendido sin discontinuidades estructurales. Stock permanente.',
+    specs: [
+      { label: 'Compatibilidad', value: '10 a 30 cm' }
+    ],
+    regularPrice: 44500,
+    offerPrice: 42275
+  },
+  {
+    slug: 'cano-roker-spesado-20mm',
+    name: 'Caño Doblado en Frío Roker S/Pesado 20 mm',
+    brand: 'Roker',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Caño semipesado Roker 20 mm doblado en frío para instalaciones embutidas.',
+    description:
+      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 20 mm. Ideal para instalaciones eléctricas embutidas en pared o losa según norma IRAM.\n\nLargo estándar 3 metros. Stock permanente en Electricidad Ramallo, Núñez. Precio bajo consulta — escribinos por WhatsApp.'
+  },
+  {
+    slug: 'cano-roker-spesado-25mm',
+    name: 'Caño Doblado en Frío Roker S/Pesado 25 mm',
+    brand: 'Roker',
+    category: 'cables',
+    image: '/images/categories/cables.jpg',
+    shortDesc: 'Caño semipesado Roker 25 mm doblado en frío para instalaciones embutidas.',
+    description:
+      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 25 mm. Sección mayor para tramos con varios cables o derivaciones múltiples en instalaciones embutidas.\n\nLargo estándar 3 metros. Stock permanente. Precio bajo consulta vía WhatsApp.'
   },
 
-  // TABLEROS
+  // ==========================================================================
+  // TABLEROS & DISYUNTORES
+  // ==========================================================================
   {
     slug: 'termica-abb-1x16',
     name: 'Térmica ABB 1x16 A',
@@ -91,11 +381,31 @@ export const products: Product[] = [
       { label: 'Curva', value: 'C' },
       { label: 'Capacidad de ruptura', value: '6 kA' }
     ],
+    regularPrice: 11464,
+    offerPrice: 10891,
     featured: true
   },
   {
+    slug: 'termica-abb-2x16',
+    name: 'Térmica ABB 2x16 A',
+    brand: 'ABB',
+    category: 'tableros',
+    image: '/images/categories/tableros.jpg',
+    shortDesc: 'Termomagnética ABB bipolar 2x16 A curva C, serie S200.',
+    description:
+      'Llave termomagnética ABB serie S200, bipolar 2x16 A con curva C. Protege simultáneamente fase y neutro contra sobrecargas y cortocircuitos. Recomendada para circuitos de tomas o iluminación donde se desea cortar ambos conductores en caso de falla.\n\nMontaje sobre riel DIN, 2 módulos. Capacidad de ruptura 6 kA, norma IEC 60898-1. Marca ABB con respaldo oficial en Argentina.',
+    specs: [
+      { label: 'Polos', value: '2' },
+      { label: 'Corriente', value: '16 A' },
+      { label: 'Curva', value: 'C' },
+      { label: 'Capacidad de ruptura', value: '6 kA' }
+    ],
+    regularPrice: 17000,
+    offerPrice: 16000
+  },
+  {
     slug: 'disyuntor-abb-2x40',
-    name: 'Disyuntor ABB 2x40 A',
+    name: 'Disyuntor ABB 2x40 A 30 mA',
     brand: 'ABB',
     category: 'tableros',
     image: '/images/products/disyuntor-abb-2x40.jpg',
@@ -109,23 +419,43 @@ export const products: Product[] = [
       { label: 'Tipo', value: 'AC' }
     ],
     regularPrice: 75958,
-    offerPrice: 63000,
+    offerPrice: 72160,
     offer: true
   },
   {
+    slug: 'disyuntor-abb-4x40',
+    name: 'Disyuntor ABB 4x40 A',
+    brand: 'ABB',
+    category: 'tableros',
+    image: '/images/categories/tableros.jpg',
+    shortDesc: 'Disyuntor diferencial ABB tetrapolar 4x40 A · trifásico.',
+    description:
+      'Interruptor diferencial ABB de 4 polos, corriente nominal 40 A. Protección diferencial para instalaciones trifásicas (3 fases + neutro). Indicado para tableros generales de comercios, galpones, talleres y oficinas con alimentación trifásica.\n\nMontaje sobre riel DIN, 4 módulos. Marca ABB con respaldo oficial en Argentina y disponibilidad permanente.',
+    specs: [
+      { label: 'Polos', value: '4' },
+      { label: 'Corriente', value: '40 A' },
+      { label: 'Aplicación', value: 'Trifásico' }
+    ],
+    regularPrice: 99000,
+    offerPrice: 94050
+  },
+  {
     slug: 'termica-siemens-1x20',
-    name: 'Térmica Siemens 1x20 A',
+    name: 'Térmica Bipolar Siemens 2x10 / 2x16 / 2x20 / 2x25 A',
     brand: 'Siemens',
     category: 'tableros',
     image: '/images/products/termica-siemens-1x20.jpg',
-    shortDesc: 'Térmica Siemens unipolar 1x20 A curva C · serie 5SL.',
+    shortDesc: 'Térmica bipolar Siemens · 4 amperajes disponibles · mismo precio.',
     description:
-      'Interruptor termomagnético Siemens línea 5SL, unipolar de 20 A con curva de disparo C. Protección contra sobrecargas y cortocircuitos para circuitos de mayor demanda como cocinas eléctricas, termotanques y aires acondicionados de baja potencia.\n\nDiseño compacto de 1 módulo DIN para máximo aprovechamiento del espacio en el tablero. Capacidad de ruptura 6 kA, cumple norma IEC 60898-1. Marca Siemens con respaldo y disponibilidad oficial en Argentina, ideal para profesionales que buscan calidad alemana a precio mayorista.\n\nPara tableros domiciliarios, oficinas y obras nuevas según reglamento AEA 90364.',
+      'Interruptor termomagnético Siemens bipolar disponible en 4 valores de corriente: 10 A, 16 A, 20 A y 25 A. Todos los modelos al mismo precio — al hacer el pedido por WhatsApp aclará qué amperaje necesitás.\n\nCurva de disparo C, protección contra sobrecargas y cortocircuitos en ambos polos (fase y neutro). Capacidad de ruptura 6 kA, montaje sobre riel DIN (2 módulos). Marca Siemens con respaldo y disponibilidad oficial en Argentina.\n\nIdeal para circuitos de tomacorrientes generales (2x16/20), termotanques (2x20), cocinas (2x25) o iluminación reforzada (2x10) en tableros domiciliarios e industriales según reglamento AEA 90364.',
     specs: [
-      { label: 'Polos', value: '1' },
-      { label: 'Corriente', value: '20 A' },
-      { label: 'Curva', value: 'C' }
-    ]
+      { label: 'Polos', value: '2' },
+      { label: 'Corriente', value: '10 / 16 / 20 / 25 A (elegí al consultar)' },
+      { label: 'Curva', value: 'C' },
+      { label: 'Serie', value: 'Siemens 5SL' }
+    ],
+    regularPrice: 27160,
+    offerPrice: 25802
   },
   {
     slug: 'disyuntor-siemens-2x25',
@@ -140,10 +470,31 @@ export const products: Product[] = [
       { label: 'Polos', value: '2' },
       { label: 'Corriente', value: '25 A' },
       { label: 'Sensibilidad', value: '30 mA' }
-    ]
+    ],
+    regularPrice: 109646,
+    offerPrice: 104164
+  },
+  {
+    slug: 'disyuntor-siemens-2x40',
+    name: 'Disyuntor Siemens 2x40 A',
+    brand: 'Siemens',
+    category: 'tableros',
+    image: '/images/categories/tableros.jpg',
+    shortDesc: 'Disyuntor diferencial Siemens bipolar 2x40 A · 30 mA · serie 5SM.',
+    description:
+      'Interruptor diferencial Siemens 5SM, bipolar de 40 A con sensibilidad de 30 mA. Protección diferencial general para tableros domiciliarios y comerciales con consumo medio-alto. Cumple reglamento AEA 90364.\n\nMontaje sobre riel DIN, 2 módulos. Marca Siemens con respaldo oficial en Argentina.',
+    specs: [
+      { label: 'Polos', value: '2' },
+      { label: 'Corriente', value: '40 A' },
+      { label: 'Sensibilidad', value: '30 mA' }
+    ],
+    regularPrice: 123179,
+    offerPrice: 117020
   },
 
-  // MATERIALES
+  // ==========================================================================
+  // MATERIALES ELÉCTRICOS
+  // ==========================================================================
   {
     slug: 'ficha-cambre-xxi',
     name: 'Ficha Cambre XXI',
@@ -158,7 +509,61 @@ export const products: Product[] = [
       { label: 'Corriente', value: '10/16 A' },
       { label: 'Línea', value: 'XXI' }
     ],
+    regularPrice: 1904,
+    offerPrice: 1809,
     featured: true
+  },
+  {
+    slug: 'modulo-cambre-xxi-combinador',
+    name: 'Módulo Cambre XXI Combinador',
+    brand: 'Cambre',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Módulo combinador Cambre Siglo XXI (M6901) — llave de 2 vías.',
+    description:
+      'Módulo combinador Cambre línea Siglo XXI. Llave de 2 vías (también llamada conmutador o "combinada") que permite controlar un mismo punto de luz desde dos lugares distintos — típico para luces de escalera, pasillos largos o dormitorios con interruptor a la entrada y otro junto a la cama.\n\nCorriente nominal 10 A, tensión 250 V. Compatible con bastidores y tapas Cambre Siglo XXI y XXII. Stock permanente en Electricidad Ramallo.',
+    specs: [
+      { label: 'Tipo', value: 'Combinador / 2 vías' },
+      { label: 'Corriente', value: '10 A' },
+      { label: 'Línea', value: 'XXI' }
+    ],
+    regularPrice: 2057,
+    offerPrice: 1954,
+    internalCode: 'M6901'
+  },
+  {
+    slug: 'modulo-cambre-xxi-toma-tierra',
+    name: 'Módulo Cambre XXI Toma 2P+T',
+    brand: 'Cambre',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Módulo toma con tierra Cambre Siglo XXI (M6909).',
+    description:
+      'Módulo de tomacorriente 2P+T (fase + neutro + tierra) Cambre línea Siglo XXI. Toma estándar argentino con tres patitas planas, cumple norma IRAM 2071.\n\nCorriente nominal 10/16 A, tensión 250 V. Compatible con bastidores y tapas Cambre Siglo XXI y XXII. Construcción en termoplástico resistente.',
+    specs: [
+      { label: 'Tipo', value: 'Toma 2P+T (estándar argentino)' },
+      { label: 'Corriente', value: '10/16 A' },
+      { label: 'Línea', value: 'XXI' }
+    ],
+    regularPrice: 2552,
+    offerPrice: 2424,
+    internalCode: 'M6909'
+  },
+  {
+    slug: 'modulo-cambre-xxi-toma-especial',
+    name: 'Módulo Cambre XXI Toma Especial',
+    brand: 'Cambre',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Módulo toma especial Cambre Siglo XXI (M6999).',
+    description:
+      'Módulo de tomacorriente especial Cambre línea Siglo XXI, código M6999. Variante de toma con prestación adicional dentro de la línea XXI. Consultanos por WhatsApp para confirmar disponibilidad y especificación exacta según tu necesidad.\n\nCompatible con bastidores y tapas Cambre Siglo XXI y XXII.',
+    specs: [
+      { label: 'Línea', value: 'XXI' }
+    ],
+    regularPrice: 7177,
+    offerPrice: 6818,
+    internalCode: 'M6999'
   },
   {
     slug: 'tapa-cambre-xxi-blanca',
@@ -173,10 +578,65 @@ export const products: Product[] = [
       { label: 'Módulos', value: '2' },
       { label: 'Color', value: 'Blanco mate' },
       { label: 'Compatibilidad', value: 'Caja 5x10' }
-    ]
+    ],
+    regularPrice: 729,
+    offerPrice: 693,
+    internalCode: 'T001'
+  },
+  {
+    slug: 'tapa-cambre-xxii-blanca',
+    name: 'Tapa Cambre XXII Blanca',
+    brand: 'Cambre',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Tapa Cambre Siglo XXII · blanca · diseño premium.',
+    description:
+      'Tapa Cambre línea Siglo XXII en color blanco. Evolución estética de la línea XXI con perfiles más finos, terminación premium y mejor integración visual en ambientes modernos. Compatible con módulos Cambre Siglo XXI y XXII.\n\nFabricada en termoplástico de alta calidad. Ideal para residencias, hoteles, oficinas y locales gastronómicos donde el detalle de terminación importa.',
+    specs: [
+      { label: 'Línea', value: 'XXII' },
+      { label: 'Color', value: 'Blanco' }
+    ],
+    regularPrice: 2121,
+    offerPrice: 2015,
+    internalCode: 'T002'
+  },
+  {
+    slug: 'tapa-cambre-xxii-negra',
+    name: 'Tapa Cambre XXII Negra',
+    brand: 'Cambre',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Tapa Cambre Siglo XXII · negra · diseño industrial.',
+    description:
+      'Tapa Cambre línea Siglo XXII en color negro. Acabado mate negro para proyectos de diseño industrial, lofts, oficinas modernas y locales con paleta oscura. Compatible con módulos Cambre Siglo XXI y XXII.\n\nFabricada en termoplástico de alta calidad. El color es del material, por lo que no se descascara con el tiempo.',
+    specs: [
+      { label: 'Línea', value: 'XXII' },
+      { label: 'Color', value: 'Negro' }
+    ],
+    regularPrice: 2474,
+    offerPrice: 2350,
+    internalCode: 'T004'
+  },
+  {
+    slug: 'caja-rectangular',
+    name: 'Caja Rectangular',
+    brand: 'Genérico',
+    category: 'materiales',
+    image: '/images/categories/materiales.jpg',
+    shortDesc: 'Caja rectangular embutida para módulos eléctricos.',
+    description:
+      'Caja rectangular embutida estándar para alojar módulos eléctricos (tomas, llaves, dimmers). Medida 5x10 cm. Compatible con tapas Cambre Siglo XXI y XXII y otras líneas estándar del mercado argentino.\n\nFabricada en chapa galvanizada o plástico ABS según disponibilidad. Stock permanente.',
+    specs: [
+      { label: 'Medida', value: '5x10 cm' },
+      { label: 'Tipo', value: 'Embutida rectangular' }
+    ],
+    regularPrice: 360,
+    offerPrice: 342
   },
 
-  // ILUMINACION
+  // ==========================================================================
+  // ILUMINACIÓN
+  // ==========================================================================
   {
     slug: 'lampara-philips-bajo-consumo-20w',
     name: 'Lámpara Philips Bajo Consumo 20W',
@@ -210,6 +670,22 @@ export const products: Product[] = [
     ],
     offer: true,
     featured: true
+  },
+  {
+    slug: 'ojo-de-buey',
+    name: 'Ojo de Buey',
+    brand: 'Genérico',
+    category: 'iluminacion',
+    image: '/images/categories/iluminacion.jpg',
+    shortDesc: 'Ojo de buey para iluminación embutida en cielorraso.',
+    description:
+      'Artefacto tipo "ojo de buey" para iluminación embutida en cielorrasos de yeso o durlock. Diseño circular fijo, ideal para distribuir iluminación general en oficinas, locales y pasillos. Compatible con lámparas dicroicas GU10 o LED equivalentes.\n\nDiseño limpio que se integra estéticamente con el cielorraso. Stock permanente.',
+    specs: [
+      { label: 'Tipo', value: 'Embutido circular fijo' },
+      { label: 'Compatibilidad', value: 'GU10 / E27 según modelo' }
+    ],
+    regularPrice: 6500,
+    offerPrice: 6175
   }
 ];
 
