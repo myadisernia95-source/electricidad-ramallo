@@ -1,0 +1,29 @@
+# Dependabot config — opens PRs automatically when security or version
+# updates are available for our dependencies. PRs land in GitHub, you review
+# and merge when ready. Free, no setup needed beyond this file.
+#
+# Docs: https://docs.github.com/en/code-security/dependabot
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'deps'
+      prefix-development: 'deps-dev'
+      include: 'scope'
+    # Keep critical packages on tight diff — risky to auto-bump major versions.
+    ignore:
+      - dependency-name: 'next'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'react'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'react-dom'
+        update-types: ['version-update:semver-major']
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'

@@ -6,6 +6,9 @@ import { useTranslations } from 'next-intl';
 export default function Newsletter() {
   const t = useTranslations('newsletter');
   const [email, setEmail] = useState('');
+  // Honeypot: hidden field. Real users won't fill it, bots will. Sent to the
+  // API which silently drops the submission when populated.
+  const [website, setWebsite] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   async function onSubmit(e: React.FormEvent) {
@@ -16,11 +19,12 @@ export default function Newsletter() {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, website })
       });
       if (!res.ok) throw new Error('failed');
       setStatus('success');
       setEmail('');
+      setWebsite('');
     } catch {
       setStatus('error');
     }
@@ -33,6 +37,17 @@ export default function Newsletter() {
         <p className="mt-3 text-white/85">{t('subtitle')}</p>
 
         <form onSubmit={onSubmit} className="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+          {/* Honeypot — invisible to humans, fillable by automated bots. */}
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            aria-hidden="true"
+            className="absolute -left-[9999px] h-0 w-0 opacity-0 pointer-events-none"
+          />
           <input
             type="email"
             required
