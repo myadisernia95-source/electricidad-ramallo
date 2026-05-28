@@ -41,8 +41,8 @@ export const products: Product[] = [
       { label: 'Norma', value: 'IRAM NM 247-3' },
       { label: 'Color', value: 'Varios' }
     ],
-    regularPrice: 53655,
-    offerPrice: 51900,
+    regularPrice: 55823,
+    offerPrice: 53032,
     featured: true
   },
   {
@@ -59,8 +59,8 @@ export const products: Product[] = [
       { label: 'Tensión nominal', value: '450/750 V' },
       { label: 'Norma', value: 'IRAM NM 247-3' }
     ],
-    regularPrice: 86578,
-    offerPrice: 82250,
+    regularPrice: 90077,
+    offerPrice: 85573,
     featured: true
   },
   {
@@ -77,8 +77,8 @@ export const products: Product[] = [
       { label: 'Tensión nominal', value: '450/750 V' },
       { label: 'Norma', value: 'IRAM NM 247-3' }
     ],
-    regularPrice: 138700,
-    offerPrice: 131000
+    regularPrice: 144381,
+    offerPrice: 137162
   },
   {
     slug: 'cable-taller-tpr-3x1mm',
@@ -95,8 +95,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '1,00 mm²' },
       { label: 'Tipo', value: 'TPR (taller)' }
     ],
-    regularPrice: 1408,
-    offerPrice: 1338,
+    regularPrice: 1465,
+    offerPrice: 1392,
     internalCode: 'TPR-3X1.00'
   },
   {
@@ -114,8 +114,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '1,50 mm²' },
       { label: 'Tipo', value: 'TPR (taller)' }
     ],
-    regularPrice: 2150,
-    offerPrice: 2043,
+    regularPrice: 2237,
+    offerPrice: 2125,
     internalCode: 'TPR-3X1.50'
   },
   {
@@ -133,8 +133,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '2,50 mm²' },
       { label: 'Tipo', value: 'TPR (taller)' }
     ],
-    regularPrice: 3476,
-    offerPrice: 3302,
+    regularPrice: 3616,
+    offerPrice: 3435,
     internalCode: 'TPR-3X2.50'
   },
   {
@@ -152,8 +152,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '1,50 mm²' },
       { label: 'Uso', value: 'Subterráneo' }
     ],
-    regularPrice: 1922,
-    offerPrice: 1826
+    regularPrice: 2000,
+    offerPrice: 1900
   },
   {
     slug: 'cable-subterraneo-2x2-5mm',
@@ -170,8 +170,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '2,50 mm²' },
       { label: 'Uso', value: 'Subterráneo' }
     ],
-    regularPrice: 2683,
-    offerPrice: 2549
+    regularPrice: 2791,
+    offerPrice: 2651
   },
   {
     slug: 'cable-subterraneo-3x1-5mm',
@@ -188,8 +188,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '1,50 mm²' },
       { label: 'Uso', value: 'Subterráneo' }
     ],
-    regularPrice: 2567,
-    offerPrice: 2439
+    regularPrice: 2671,
+    offerPrice: 2537
   },
   {
     slug: 'cable-subterraneo-3x2-5mm',
@@ -206,8 +206,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '2,50 mm²' },
       { label: 'Uso', value: 'Subterráneo' }
     ],
-    regularPrice: 3830,
-    offerPrice: 3639
+    regularPrice: 3984,
+    offerPrice: 3785
   },
   {
     slug: 'cable-subterraneo-3x4mm',
@@ -224,8 +224,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '4,00 mm²' },
       { label: 'Uso', value: 'Subterráneo' }
     ],
-    regularPrice: 5655,
-    offerPrice: 5372
+    regularPrice: 5883,
+    offerPrice: 5589
   },
   {
     slug: 'cable-subterraneo-4x4mm',
@@ -242,8 +242,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '4,00 mm²' },
       { label: 'Uso', value: 'Subterráneo trifásico' }
     ],
-    regularPrice: 7264,
-    offerPrice: 6901
+    regularPrice: 7558,
+    offerPrice: 7180
   },
   {
     slug: 'cable-subterraneo-4x6mm',
@@ -260,8 +260,8 @@ export const products: Product[] = [
       { label: 'Sección', value: '6,00 mm²' },
       { label: 'Uso', value: 'Subterráneo trifásico' }
     ],
-    regularPrice: 10309,
-    offerPrice: 9794
+    regularPrice: 10726,
+    offerPrice: 10190
   },
   {
     slug: 'bandeja-portacable-10cm',
