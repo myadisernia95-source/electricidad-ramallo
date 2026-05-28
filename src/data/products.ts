@@ -85,7 +85,7 @@ export const products: Product[] = [
     name: 'Cable Tipo Taller TPR 3x1,00 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-taller-tpr-3x1mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable tipo taller TPR 3x1 mm² · venta por metro · uso flexible.',
     description:
@@ -104,7 +104,7 @@ export const products: Product[] = [
     name: 'Cable Tipo Taller TPR 3x1,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-taller-tpr-3x1-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable tipo taller TPR 3x1,50 mm² · venta por metro · uso flexible.',
     description:
@@ -123,7 +123,7 @@ export const products: Product[] = [
     name: 'Cable Tipo Taller TPR 3x2,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-taller-tpr-3x2-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable tipo taller TPR 3x2,50 mm² · venta por metro · alta exigencia.',
     description:
@@ -142,7 +142,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 2x1,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-2x1-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 2x1,50 mm² · venta por metro · para instalación enterrada.',
     description:
@@ -160,7 +160,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 2x2,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-2x2-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 2x2,50 mm² · venta por metro · para instalación enterrada.',
     description:
@@ -178,7 +178,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 3x1,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-3x1-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 3x1,50 mm² · venta por metro · incluye tierra.',
     description:
@@ -196,7 +196,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 3x2,50 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-3x2-5mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 3x2,50 mm² · venta por metro · incluye tierra.',
     description:
@@ -214,7 +214,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 3x4,00 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-3x4mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 3x4 mm² · venta por metro · alta corriente con tierra.',
     description:
@@ -232,7 +232,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 4x4,00 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-4x4mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 4x4 mm² · venta por metro · trifásico.',
     description:
@@ -250,7 +250,7 @@ export const products: Product[] = [
     name: 'Cable Subterráneo 4x6,00 mm²',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cable-subterraneo-4x6mm.jpg',
     unit: 'metro',
     shortDesc: 'Cable subterráneo 4x6 mm² · venta por metro · trifásico reforzado.',
     description:
@@ -268,7 +268,7 @@ export const products: Product[] = [
     name: 'Bandeja Portacable 10 cm',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/bandeja-portacable-10cm.jpg',
     shortDesc: 'Bandeja portacable de 10 cm de ancho para conducción ordenada.',
     description:
       'Bandeja portacable de 10 cm de ancho para tendido prolijo de cables en obra, sótanos, galpones y oficinas. Permite agrupar varios cables en una conducción organizada, accesible para mantenimiento y ampliaciones futuras.\n\nLargo estándar 3 metros por unidad. Tratamiento anticorrosivo. Stock permanente en Electricidad Ramallo.',
@@ -284,7 +284,7 @@ export const products: Product[] = [
     name: 'Bandeja Portacable 15 cm',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/bandeja-portacable-15cm.jpg',
     shortDesc: 'Bandeja portacable de 15 cm de ancho · uso medio.',
     description:
       'Bandeja portacable de 15 cm de ancho para tendido de cables en instalaciones medianas. Apta para múltiples ramales y conducciones de oficinas, comercios y obras nuevas.\n\nLargo estándar 3 metros por unidad. Tratamiento anticorrosivo.',
@@ -300,7 +300,7 @@ export const products: Product[] = [
     name: 'Bandeja Portacable 20 cm',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/bandeja-portacable-20cm.jpg',
     shortDesc: 'Bandeja portacable de 20 cm de ancho · uso industrial.',
     description:
       'Bandeja portacable de 20 cm para instalaciones industriales o de gran porte. Acepta gran cantidad de cables de potencia y datos en una sola conducción ordenada.\n\nLargo estándar 3 metros. Tratamiento anticorrosivo.',
@@ -316,7 +316,7 @@ export const products: Product[] = [
     name: 'Bandeja Portacable 30 cm',
     brand: 'Genérico',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/bandeja-portacable-30cm.jpg',
     shortDesc: 'Bandeja portacable de 30 cm de ancho · uso industrial pesado.',
     description:
       'Bandeja portacable de 30 cm de ancho para instalaciones industriales pesadas, datacenters y galpones donde se requiere alta capacidad de conducción.\n\nLargo estándar 3 metros. Tratamiento anticorrosivo. Stock por encargo.',
