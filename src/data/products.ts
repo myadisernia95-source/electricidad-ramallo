@@ -347,7 +347,7 @@ export const products: Product[] = [
     name: 'Caño Doblado en Frío Roker S/Pesado 20 mm',
     brand: 'Roker',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cano-roker-spesado-20mm.jpg',
     shortDesc: 'Caño semipesado Roker 20 mm doblado en frío para instalaciones embutidas.',
     description:
       'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 20 mm. Ideal para instalaciones eléctricas embutidas en pared o losa según norma IRAM.\n\nLargo estándar 3 metros. Stock permanente en Electricidad Ramallo, Núñez. Precio bajo consulta — escribinos por WhatsApp.'
@@ -357,7 +357,7 @@ export const products: Product[] = [
     name: 'Caño Doblado en Frío Roker S/Pesado 25 mm',
     brand: 'Roker',
     category: 'cables',
-    image: '/images/categories/cables.jpg',
+    image: '/images/products/cano-roker-spesado-25mm.jpg',
     shortDesc: 'Caño semipesado Roker 25 mm doblado en frío para instalaciones embutidas.',
     description:
       'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 25 mm. Sección mayor para tramos con varios cables o derivaciones múltiples en instalaciones embutidas.\n\nLargo estándar 3 metros. Stock permanente. Precio bajo consulta vía WhatsApp.'
@@ -390,7 +390,7 @@ export const products: Product[] = [
     name: 'Térmica ABB 2x16 A',
     brand: 'ABB',
     category: 'tableros',
-    image: '/images/categories/tableros.jpg',
+    image: '/images/products/termica-abb-2x16.jpg',
     shortDesc: 'Termomagnética ABB bipolar 2x16 A curva C, serie S200.',
     description:
       'Llave termomagnética ABB serie S200, bipolar 2x16 A con curva C. Protege simultáneamente fase y neutro contra sobrecargas y cortocircuitos. Recomendada para circuitos de tomas o iluminación donde se desea cortar ambos conductores en caso de falla.\n\nMontaje sobre riel DIN, 2 módulos. Capacidad de ruptura 6 kA, norma IEC 60898-1. Marca ABB con respaldo oficial en Argentina.',
@@ -427,7 +427,7 @@ export const products: Product[] = [
     name: 'Disyuntor ABB 4x40 A',
     brand: 'ABB',
     category: 'tableros',
-    image: '/images/categories/tableros.jpg',
+    image: '/images/products/disyuntor-abb-4x40.jpg',
     shortDesc: 'Disyuntor diferencial ABB tetrapolar 4x40 A · trifásico.',
     description:
       'Interruptor diferencial ABB de 4 polos, corriente nominal 40 A. Protección diferencial para instalaciones trifásicas (3 fases + neutro). Indicado para tableros generales de comercios, galpones, talleres y oficinas con alimentación trifásica.\n\nMontaje sobre riel DIN, 4 módulos. Marca ABB con respaldo oficial en Argentina y disponibilidad permanente.',
@@ -479,7 +479,7 @@ export const products: Product[] = [
     name: 'Disyuntor Siemens 2x40 A',
     brand: 'Siemens',
     category: 'tableros',
-    image: '/images/categories/tableros.jpg',
+    image: '/images/products/disyuntor-siemens-2x40.jpg',
     shortDesc: 'Disyuntor diferencial Siemens bipolar 2x40 A · 30 mA · serie 5SM.',
     description:
       'Interruptor diferencial Siemens 5SM, bipolar de 40 A con sensibilidad de 30 mA. Protección diferencial general para tableros domiciliarios y comerciales con consumo medio-alto. Cumple reglamento AEA 90364.\n\nMontaje sobre riel DIN, 2 módulos. Marca Siemens con respaldo oficial en Argentina.',
@@ -590,7 +590,7 @@ export const products: Product[] = [
     name: 'Tapa Cambre XXII Blanca',
     brand: 'Cambre',
     category: 'materiales',
-    image: '/images/categories/materiales.jpg',
+    image: '/images/products/tapa-cambre-xxii-blanca.jpg',
     shortDesc: 'Tapa Cambre Siglo XXII · blanca · diseño premium.',
     description:
       'Tapa Cambre línea Siglo XXII en color blanco. Evolución estética de la línea XXI con perfiles más finos, terminación premium y mejor integración visual en ambientes modernos. Compatible con módulos Cambre Siglo XXI y XXII.\n\nFabricada en termoplástico de alta calidad. Ideal para residencias, hoteles, oficinas y locales gastronómicos donde el detalle de terminación importa.',
@@ -607,7 +607,7 @@ export const products: Product[] = [
     name: 'Tapa Cambre XXII Negra',
     brand: 'Cambre',
     category: 'materiales',
-    image: '/images/categories/materiales.jpg',
+    image: '/images/products/tapa-cambre-xxii-negra.jpg',
     shortDesc: 'Tapa Cambre Siglo XXII · negra · diseño industrial.',
     description:
       'Tapa Cambre línea Siglo XXII en color negro. Acabado mate negro para proyectos de diseño industrial, lofts, oficinas modernas y locales con paleta oscura. Compatible con módulos Cambre Siglo XXI y XXII.\n\nFabricada en termoplástico de alta calidad. El color es del material, por lo que no se descascara con el tiempo.',
@@ -678,7 +678,7 @@ export const products: Product[] = [
     name: 'Ojo de Buey',
     brand: 'Genérico',
     category: 'iluminacion',
-    image: '/images/categories/iluminacion.jpg',
+    image: '/images/products/ojo-de-buey.jpg',
     shortDesc: 'Ojo de buey para iluminación embutida en cielorraso.',
     description:
       'Artefacto tipo "ojo de buey" para iluminación embutida en cielorrasos de yeso o durlock. Diseño circular fijo, ideal para distribuir iluminación general en oficinas, locales y pasillos. Compatible con lámparas dicroicas GU10 o LED equivalentes.\n\nDiseño limpio que se integra estéticamente con el cielorraso. Stock permanente.',
