@@ -43,7 +43,8 @@ export const products: Product[] = [
     ],
     regularPrice: 55823,
     offerPrice: 53032,
-    featured: true
+    featured: true,
+    internalCode: 'C4-UNI0015'
   },
   {
     slug: 'cable-argenplas-2-5mm',
@@ -61,7 +62,8 @@ export const products: Product[] = [
     ],
     regularPrice: 90077,
     offerPrice: 85573,
-    featured: true
+    featured: true,
+    internalCode: 'C4-UNI0025'
   },
   {
     slug: 'cable-argenplas-4mm',
@@ -78,7 +80,8 @@ export const products: Product[] = [
       { label: 'Norma', value: 'IRAM NM 247-3' }
     ],
     regularPrice: 144381,
-    offerPrice: 137162
+    offerPrice: 137162,
+    internalCode: 'C4-UNI0040'
   },
   {
     slug: 'cable-taller-tpr-3x1mm',
@@ -97,7 +100,7 @@ export const products: Product[] = [
     ],
     regularPrice: 1465,
     offerPrice: 1392,
-    internalCode: 'TPR-3X1.00'
+    internalCode: 'C4-TPR3100'
   },
   {
     slug: 'cable-taller-tpr-3x1-5mm',
@@ -116,7 +119,7 @@ export const products: Product[] = [
     ],
     regularPrice: 2237,
     offerPrice: 2125,
-    internalCode: 'TPR-3X1.50'
+    internalCode: 'C4-TPR3150'
   },
   {
     slug: 'cable-taller-tpr-3x2-5mm',
@@ -135,7 +138,7 @@ export const products: Product[] = [
     ],
     regularPrice: 3616,
     offerPrice: 3435,
-    internalCode: 'TPR-3X2.50'
+    internalCode: 'C4-TPR3250'
   },
   {
     slug: 'cable-subterraneo-2x1-5mm',
@@ -153,7 +156,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo' }
     ],
     regularPrice: 2000,
-    offerPrice: 1900
+    offerPrice: 1900,
+    internalCode: 'C4-SUB0020150'
   },
   {
     slug: 'cable-subterraneo-2x2-5mm',
@@ -171,7 +175,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo' }
     ],
     regularPrice: 2791,
-    offerPrice: 2651
+    offerPrice: 2651,
+    internalCode: 'C4-SUB0020250'
   },
   {
     slug: 'cable-subterraneo-3x1-5mm',
@@ -189,7 +194,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo' }
     ],
     regularPrice: 2671,
-    offerPrice: 2537
+    offerPrice: 2537,
+    internalCode: 'C4-SUB0030150'
   },
   {
     slug: 'cable-subterraneo-3x2-5mm',
@@ -207,7 +213,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo' }
     ],
     regularPrice: 3984,
-    offerPrice: 3785
+    offerPrice: 3785,
+    internalCode: 'C4-SUB0030250'
   },
   {
     slug: 'cable-subterraneo-3x4mm',
@@ -225,7 +232,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo' }
     ],
     regularPrice: 5883,
-    offerPrice: 5589
+    offerPrice: 5589,
+    internalCode: 'C4-SUB0030400'
   },
   {
     slug: 'cable-subterraneo-4x4mm',
@@ -243,7 +251,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo trifásico' }
     ],
     regularPrice: 7558,
-    offerPrice: 7180
+    offerPrice: 7180,
+    internalCode: 'C4-SUB0040400'
   },
   {
     slug: 'cable-subterraneo-4x6mm',
@@ -261,7 +270,8 @@ export const products: Product[] = [
       { label: 'Uso', value: 'Subterráneo trifásico' }
     ],
     regularPrice: 10726,
-    offerPrice: 10190
+    offerPrice: 10190,
+    internalCode: 'C4-SUB0040600'
   },
   {
     slug: 'bandeja-portacable-10cm',
@@ -350,7 +360,8 @@ export const products: Product[] = [
     image: '/images/products/cano-roker-spesado-20mm.jpg',
     shortDesc: 'Caño semipesado Roker 20 mm doblado en frío para instalaciones embutidas.',
     description:
-      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 20 mm. Ideal para instalaciones eléctricas embutidas en pared o losa según norma IRAM.\n\nLargo estándar 3 metros. Stock permanente en Electricidad Ramallo, Núñez. Precio bajo consulta — escribinos por WhatsApp.'
+      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 20 mm. Ideal para instalaciones eléctricas embutidas en pared o losa según norma IRAM.\n\nLargo estándar 3 metros. Stock permanente en Electricidad Ramallo, Núñez. Precio bajo consulta — escribinos por WhatsApp.',
+    internalCode: 'ROKER-CRX20'
   },
   {
     slug: 'cano-roker-spesado-25mm',
@@ -360,7 +371,8 @@ export const products: Product[] = [
     image: '/images/products/cano-roker-spesado-25mm.jpg',
     shortDesc: 'Caño semipesado Roker 25 mm doblado en frío para instalaciones embutidas.',
     description:
-      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 25 mm. Sección mayor para tramos con varios cables o derivaciones múltiples en instalaciones embutidas.\n\nLargo estándar 3 metros. Stock permanente. Precio bajo consulta vía WhatsApp.'
+      'Caño doblado en frío marca Roker, línea semipesado (S/Pesado), diámetro 25 mm. Sección mayor para tramos con varios cables o derivaciones múltiples en instalaciones embutidas.\n\nLargo estándar 3 metros. Stock permanente. Precio bajo consulta vía WhatsApp.',
+    internalCode: 'ROKER-CRX25'
   },
 
   // ==========================================================================
@@ -583,7 +595,7 @@ export const products: Product[] = [
     ],
     regularPrice: 729,
     offerPrice: 693,
-    internalCode: 'T001'
+    internalCode: 'CAMBRE-T001'
   },
   {
     slug: 'tapa-cambre-xxii-blanca',
@@ -600,7 +612,7 @@ export const products: Product[] = [
     ],
     regularPrice: 2121,
     offerPrice: 2015,
-    internalCode: 'T002'
+    internalCode: 'CAMBRE-T002'
   },
   {
     slug: 'tapa-cambre-xxii-negra',
@@ -617,7 +629,7 @@ export const products: Product[] = [
     ],
     regularPrice: 2474,
     offerPrice: 2350,
-    internalCode: 'T004'
+    internalCode: 'CAMBRE-T004'
   },
   {
     slug: 'caja-rectangular',
