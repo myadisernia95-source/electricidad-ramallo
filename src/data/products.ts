@@ -536,7 +536,7 @@ export const products: Product[] = [
     name: 'Módulo Cambre XXI Toma 2P+T',
     brand: 'Cambre',
     category: 'materiales',
-    image: '/images/categories/materiales.jpg',
+    image: '/images/products/modulo-cambre-xxi-toma-2pt.jpg',
     shortDesc: 'Módulo toma 2P+T Cambre Siglo XXI (M6909) — con tierra.',
     description:
       'Módulo de tomacorriente 2P+T (fase + neutro + tierra) Cambre línea Siglo XXI. Toma estándar argentino con tres patitas planas, cumple norma IRAM 2071.\n\nCorriente nominal 10/16 A, tensión 250 V. Compatible con bastidores y tapas Cambre Siglo XXI y XXII. Construcción en termoplástico resistente.',
@@ -554,7 +554,7 @@ export const products: Product[] = [
     name: 'Módulo Cambre XXI Toma 2P+T Doble',
     brand: 'Cambre',
     category: 'materiales',
-    image: '/images/categories/materiales.jpg',
+    image: '/images/products/modulo-cambre-xxi-toma-2pt-doble.jpg',
     shortDesc: 'Módulo toma 2P+T doble Cambre Siglo XXI (M6999) — dos tomas en un módulo.',
     description:
       'Módulo doble de tomacorriente 2P+T Cambre línea Siglo XXI: dos tomas con tierra integradas en un solo módulo, ideal cuando necesitás más conexiones y querés ahorrar espacio en el bastidor.\n\nCorriente nominal 10/16 A por toma, tensión 250 V. Cumple norma IRAM 2071. Compatible con bastidores y tapas Cambre Siglo XXI y XXII. Stock permanente en Electricidad Ramallo, Núñez.',
