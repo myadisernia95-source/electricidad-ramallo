@@ -64,7 +64,7 @@ export function localBusinessJsonLd(locale: Locale | string = 'es') {
         contactType: 'sales',
         telephone: PHONE_E164,
         areaServed: 'AR',
-        availableLanguage: ['Spanish', 'English', 'Portuguese']
+        availableLanguage: ['Spanish']
       }
     ],
     paymentAccepted: 'Mercado Pago, Transferencia, Tarjeta de crédito, Tarjeta de débito, Efectivo',
@@ -197,7 +197,7 @@ export function websiteJsonLd() {
     '@id': `${SITE_URL}/#website`,
     name: 'Electricidad Ramallo',
     url: SITE_URL,
-    inLanguage: ['es-AR', 'en', 'pt'],
+    inLanguage: 'es-AR',
     publisher: { '@id': `${SITE_URL}/#organization` },
     potentialAction: {
       '@type': 'SearchAction',

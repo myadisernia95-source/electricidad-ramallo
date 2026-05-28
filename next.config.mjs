@@ -44,6 +44,16 @@ const nextConfig = {
   },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];
+  },
+  // 301 redirects for old multi-language URLs (Google may have indexed some
+  // /en/... or /pt/... paths before we collapsed to Spanish-only).
+  async redirects() {
+    return [
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
+      { source: '/pt', destination: '/', permanent: true },
+      { source: '/pt/:path*', destination: '/:path*', permanent: true }
+    ];
   }
 };
 

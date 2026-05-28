@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Electricidad Ramallo',
     locale: 'es_AR',
-    alternateLocale: ['en_US', 'pt_BR'],
     url: SITE_URL,
     images: [
       {

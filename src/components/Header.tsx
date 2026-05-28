@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Logo from './Logo';
-import LanguageSwitcher from './LanguageSwitcher';
 import SearchBar from './SearchBar';
 import CartButton from './cart/CartButton';
 import { whatsappLink } from '@/lib/whatsapp';
@@ -34,7 +33,6 @@ export default function Header() {
 
         {/* Desktop right cluster */}
         <div className="hidden lg:flex items-center gap-3 ml-auto">
-          <LanguageSwitcher />
           <CartButton />
           <a
             href={whatsappLink('Hola Electricidad Ramallo, quería hacer una consulta.')}
@@ -122,8 +120,7 @@ export default function Header() {
             >
               {t('cart')}
             </Link>
-            <div className="flex items-center justify-between pt-3 border-t border-cream-200">
-              <LanguageSwitcher />
+            <div className="flex items-center justify-end pt-3 border-t border-cream-200">
               <a
                 href={whatsappLink('Hola Electricidad Ramallo, quería hacer una consulta.')}
                 target="_blank"
