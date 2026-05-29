@@ -5,13 +5,15 @@ import * as termicaVsDisyuntor from './termica-vs-disyuntor';
 import * as comoArmarTablero from './como-armar-tablero-electrico-domiciliario';
 import * as abbVsSiemens from './abb-vs-siemens-tablero';
 import * as lumenesPorAmbiente from './lumenes-por-ambiente';
+import * as reducirFacturaLuz from './7-formas-reducir-factura-luz';
 
 const modules: Guide[] = [
   cableSection,
   termicaVsDisyuntor,
   comoArmarTablero,
   abbVsSiemens,
-  lumenesPorAmbiente
+  lumenesPorAmbiente,
+  reducirFacturaLuz
 ];
 
 /** Sort guides by publish date desc, then by title. */
